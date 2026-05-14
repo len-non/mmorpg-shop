@@ -586,7 +586,6 @@ function closePopup(){
   function closeCookieBanner() {
     const banner = document.getElementById('cookieBanner');
     banner.style.transform = 'translateY(150%)'; // Sanftes Nach-unten-Gleiten
-    localStorage.setItem('cookieDecisionMade', 'true');
     setTimeout(() => {
       banner.classList.add('hidden');
     }, 500);
@@ -595,13 +594,10 @@ function closePopup(){
   // Optional: Banner nach 1 Sekunde Verzögerung anzeigen für besseren Effekt
   window.onload = () => {
     const banner = document.getElementById('cookieBanner');
-    const decisionMade = localStorage.getItem('cookieDecisionMade');
-    if (!decisionMade) {
-      banner.classList.remove('hidden');
-      setTimeout(() => {
-        banner.style.transform = 'translateY(0)';
-      }, 1000);
-    } 
+    banner.classList.remove('hidden');
+    setTimeout(() => {
+      banner.style.transform = 'translateY(0)';
+    }, 1000);
   };
 function reopenCookieBanner() {
   const banner = document.getElementById('cookieBanner');
