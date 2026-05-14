@@ -224,56 +224,57 @@
         </article>
     </div>
   </main>
-<script>
-<div id="cookieBanner" class="fixed bottom-6 left-6 right-6 md:left-auto md:max-w-md z-[100] transform transition-transform duration-500 translate-y-0">
-  <div class="card rounded-2xl p-6 shadow-2xl border-amber-400/30 bg-slate-900/95 backdrop-blur-md">
-    <div class="flex items-start gap-4">
-      <div class="text-3xl" aria-hidden="true">🍪</div>
-      <div>
-        <h3 class="text-lg font-bold text-amber-400 mb-2">Cookie-Einstellungen</h3>
-        <p class="text-sm text-slate-300 mb-4 leading-relaxed">
-          Wir nutzen Cookies, um Ihre Nutzererfahrung zu optimieren. Einige sind essenziell, andere helfen uns, den Shop zu verbessern.
-          Diese Cookie-Einstellungen können jederzeit in der Datenschutzerklärung unter "Verwendung von Cookies" geändert werden.
-        </p>
-        <div class="flex flex-wrap gap-3">
-          <button onclick="closeCookieBanner()" class="bg-amber-400 text-black text-sm font-bold px-4 py-2 rounded-lg hover:bg-amber-300 transition focus-ring">
-            Alle akzeptieren
-          </button>
-          <button onclick="closeCookieBanner()" class="bg-amber-400 text-black text-sm font-bold px-4 py-2 rounded-lg hover:bg-amber-300 transition focus-ring">
-            Nur essenzielle
-          </button>
-          <a href="#legal" onclick="closeCookieBanner()" class="text-xs text-slate-400 hover:text-amber-400 self-center underline">
-            Datenschutzerklärung
-          </a>
-        </div>
+<div id="cookieModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center px-6">
+  <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+  
+  <div class="card relative z-10 w-full max-w-lg rounded-3xl p-8 shadow-2xl border-amber-400/20 bg-slate-900">
+    <div class="text-center">
+      <div class="text-5xl mb-4">🍪</div>
+      <h2 class="text-3xl font-bold text-amber-400 mb-4">Cookie-Einstellungen</h2>
+      <p class="text-slate-300 mb-8 leading-relaxed">
+        Passen Sie Ihre Cookie-Einstellungen für <strong>DarkCavern Studios</strong> an. 
+        Einige Cookies sind für den Betrieb des Shops technisch notwendig.
+      </p>
+
+      <div class="space-y-4">
+        <button onclick="saveCookieChoice('all')" class="w-full bg-amber-400 text-black font-bold py-4 rounded-xl hover:bg-amber-300 transition border border-slate-700 focus-ring">
+          Alle akzeptieren 
+        </button>
+        
+        <button onclick="saveCookieChoice('essential')" class="w-full bg-amber-400 text-white font-bold py-4 rounded-xl hover:bg-amber-300 transition border border-slate-700 focus-ring">
+          Nur essenzielle Cookies
+        </button>
       </div>
+
+      <p class="text-[10px] text-slate-500 mt-6 uppercase tracking-widest">
+        Ihre Wahl wird für zukünftige Besuche gespeichert.
+      </p>
     </div>
   </div>
 </div>
-  
-function closeCookieBanner() {
-    const banner = document.getElementById('cookieBanner');
-    banner.style.transform = 'translateY(150%)'; // Sanftes Nach-unten-Gleiten
-    setTimeout(() => {
-      banner.classList.add('hidden');
-    }, 500);
+<script>
+  // Öffnet das zentrale Modal
+  function reopenCookieBanner() {
+    const modal = document.getElementById('cookieModal');
+    modal.classList.remove('hidden');
+    // Verhindert das Scrollen im Hintergrund, wenn das Modal offen ist
+    document.body.style.overflow = 'hidden';
   }
-  
-function reopenCookieBanner() {
-  const banner = document.getElementById('cookieBanner');
-  banner.classList.remove('hidden');
-  setTimeout(() => {
-    banner.style.transform = 'translateY(0)';
-  }, 10);
-}
 
-function closeCookieBanner() {
-  const banner = document.getElementById('cookieBanner');
-  banner.style.transform = 'translateY(150%)';
-  setTimeout(() => {
-    banner.classList.add('hidden');
-  }, 500);
-}
+  // Speichert die Wahl und schließt das Modal
+  function saveCookieChoice(choice) {
+    const modal = document.getElementById('cookieModal');
+    
+    // Wir speichern die Entscheidung im LocalStorage (wie besprochen)
+    localStorage.setItem('cookieDecisionMade', 'true');
+    localStorage.setItem('cookieType', choice);
+
+    modal.classList.add('hidden');
+    // Scrollen wieder erlauben
+    document.body.style.overflow = 'auto';
+    
+    console.log("Cookie-Wahl gespeichert: " + choice);
+  }
 </script>
   </body>
 </html>
