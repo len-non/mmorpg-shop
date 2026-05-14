@@ -225,6 +225,40 @@
     </div>
   </main>
 <script>
+<div id="cookieBanner" class="fixed bottom-6 left-6 right-6 md:left-auto md:max-w-md z-[100] transform transition-transform duration-500 translate-y-0">
+  <div class="card rounded-2xl p-6 shadow-2xl border-amber-400/30 bg-slate-900/95 backdrop-blur-md">
+    <div class="flex items-start gap-4">
+      <div class="text-3xl" aria-hidden="true">🍪</div>
+      <div>
+        <h3 class="text-lg font-bold text-amber-400 mb-2">Cookie-Einstellungen</h3>
+        <p class="text-sm text-slate-300 mb-4 leading-relaxed">
+          Wir nutzen Cookies, um Ihre Nutzererfahrung zu optimieren. Einige sind essenziell, andere helfen uns, den Shop zu verbessern.
+          Diese Cookie-Einstellungen können jederzeit in der Datenschutzerklärung unter "Verwendung von Cookies" geändert werden.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <button onclick="closeCookieBanner()" class="bg-amber-400 text-black text-sm font-bold px-4 py-2 rounded-lg hover:bg-amber-300 transition focus-ring">
+            Alle akzeptieren
+          </button>
+          <button onclick="closeCookieBanner()" class="bg-amber-400 text-black text-sm font-bold px-4 py-2 rounded-lg hover:bg-amber-300 transition focus-ring">
+            Nur essenzielle
+          </button>
+          <a href="#legal" onclick="closeCookieBanner()" class="text-xs text-slate-400 hover:text-amber-400 self-center underline">
+            Datenschutzerklärung
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+function closeCookieBanner() {
+    const banner = document.getElementById('cookieBanner');
+    banner.style.transform = 'translateY(150%)'; // Sanftes Nach-unten-Gleiten
+    setTimeout(() => {
+      banner.classList.add('hidden');
+    }, 500);
+  }
+  
 function reopenCookieBanner() {
   const banner = document.getElementById('cookieBanner');
   banner.classList.remove('hidden');
