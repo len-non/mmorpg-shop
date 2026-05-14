@@ -7,7 +7,7 @@
 
   <title>ElderRealm Studios</title>
 
-  <!-- Tailwind -->
+  <!-- TailwindCSS -->
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -17,9 +17,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    ul{
-      list-style:none;
-    }
     body{
       font-family:'Inter',sans-serif;
     }
@@ -54,7 +51,7 @@
   ElderRealm
 </a>
 
-<ul class="flex gap-6 text-sm md:text-base">
+<ul class="flex gap-6 text-sm md:text-base list-none">
 
   <li>
     <a href="#game" class="hover:text-amber-300 focus-ring rounded-md px-2 py-1">
@@ -110,18 +107,42 @@
   und spiele gemeinsam mit Freunden in einer offenen Fantasywelt.
 </p>
 
-<button
-  aria-label="Spiel kaufen"
-  class="bg-amber-400 text-black font-bold px-8 py-4 rounded-xl hover:bg-amber-300 transition focus-ring">
+<!-- SOUNDTRACK PREVIEW -->
+<div class="card rounded-2xl p-6 mb-10 max-w-xl mx-auto text-left">
+
+  <h2 class="text-xl font-bold mb-4 text-amber-400">
+    Soundtrack Vorschau
+  </h2>
+
+  <p class="text-slate-300 mb-4">
+    Hörprobe aus dem offiziellen Fantasy Soundtrack.
+  </p>
+
+  <audio controls class="w-full" aria-label="Fantasy Soundtrack Vorschau">
+    <source src="fantasy-theme.mp3" type="audio/mpeg">
+    Dein Browser unterstützt kein Audio.
+  </audio>
+
+  <p class="text-sm text-slate-400 mt-3">
+    Lizenz: Eigenproduktion von ElderRealm Studios.
+  </p>
+
+</div>
+
+<a
+  href="#pricing"
+  class="bg-amber-400 text-black font-bold px-8 py-4 rounded-xl hover:bg-amber-300 transition focus-ring inline-block"
+  aria-label="Zu den Kaufoptionen springen"
+>
   Jetzt kaufen
-</button>
+</a>
 
 
   </div>
 
 </section>
 
-<!-- GAME FEATURES -->
+<!-- FEATURES -->
 
 <section id="game" class="py-24 px-6">
 
@@ -202,7 +223,6 @@
 
 <div class="grid md:grid-cols-3 gap-8">
 
-  <!-- STANDARD -->
   <article class="card rounded-2xl p-8">
 
     <h3 class="text-2xl font-bold mb-4">
@@ -213,7 +233,7 @@
       29€
     </p>
 
-    <ul class="space-y-3 text-slate-300 mb-8">
+    <ul class="space-y-3 text-slate-300 mb-8 list-none">
       <li>✔ Vollversion</li>
       <li>✔ Online Multiplayer</li>
       <li>✔ 3 Klassen</li>
@@ -225,7 +245,6 @@
 
   </article>
 
-  <!-- DELUXE -->
   <article class="rounded-2xl p-8 border-2 border-amber-400 bg-slate-800">
 
     <p class="text-xs uppercase tracking-widest text-amber-400 mb-3 font-bold">
@@ -240,7 +259,7 @@
       49€
     </p>
 
-    <ul class="space-y-3 text-slate-300 mb-8">
+    <ul class="space-y-3 text-slate-300 mb-8 list-none">
       <li>✔ Alle DLCs</li>
       <li>✔ Exklusive Mounts</li>
       <li>✔ Soundtrack</li>
@@ -252,7 +271,6 @@
 
   </article>
 
-  <!-- COLLECTOR -->
   <article class="card rounded-2xl p-8">
 
     <h3 class="text-2xl font-bold mb-4">
@@ -263,7 +281,7 @@
       79€
     </p>
 
-    <ul class="space-y-3 text-slate-300 mb-8">
+    <ul class="space-y-3 text-slate-300 mb-8 list-none">
       <li>✔ Artbook PDF</li>
       <li>✔ Digitaler Soundtrack</li>
       <li>✔ Beta Zugang</li>
@@ -404,6 +422,21 @@
 
   </article>
 
+  <article class="card rounded-2xl p-8">
+
+    <h3 class="text-2xl font-bold mb-4 text-amber-400">
+      Urheberrecht & Medienlizenzen
+    </h3>
+
+    <ul class="text-slate-300 space-y-2 list-disc list-inside">
+      <li>Schriftart: Google Fonts Open Font License</li>
+      <li>Fantasy Musik: Eigenproduktion</li>
+      <li>Icons & Emojis: Unicode Standard</li>
+      <li>Bilder: Unsplash Lizenz oder Eigenmaterial</li>
+    </ul>
+
+  </article>
+
 </div>
 
 
@@ -425,4 +458,5 @@
 
 </footer>
 
-</b
+</body>
+</html>
