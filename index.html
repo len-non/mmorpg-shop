@@ -87,62 +87,62 @@
 
 <!-- HERO -->
 
-<section id="home" class="py-28 px-6 bg-gradient-to-b from-slate-900 to-slate-950 text-center">
+<section id="home" class="relative min-h-[80vh] flex items-center justify-center py-20 px-6 overflow-hidden">
+  
+  <!-- Hintergrundbild mit Objektabdeckung -->
+  <img src="image_world.png" alt="Helden im Kampf gegen einen grünen Drachen" class="absolute inset-0 w-full h-full object-cover">
+  
+  <!-- Overlay: Dunkler Verlauf von unten nach oben für bessere Lesbarkeit -->
+  <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-slate-900/40"></div>
 
-  <div class="max-w-4xl mx-auto">
+  <div class="relative z-10 max-w-4xl mx-auto text-center">
 
+    <p class="text-amber-400 font-bold mb-4 tracking-wide drop-shadow-md">
+      Fantasy MMORPG für PC
+    </p>
 
-<p class="text-amber-400 font-semibold mb-4">
-  Fantasy MMORPG für PC
-</p>
+    <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight text-white drop-shadow-2xl">
+      Journey into
+      <span class="text-amber-400">
+        Vartheria
+      </span>
+    </h1>
 
-<h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight">
-  Journey into
-  <span class="text-amber-400">
-    Vartheria
-  </span>
-</h1>
+    <p class="text-slate-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto drop-shadow-lg">
+      Erkunde die Tiefen des Königreiches Vartheria, besiege mystische Kreaturen und
+      schließe dich mit Freunden in einer Gilde zusammen in dieser Open-World Fantasywelt.
+    </p>
 
-<p class="text-slate-300 text-lg md:text-xl mb-10">
-  Erkunde die Tiefen des Königreiches Vartheria, besiege mystische Kreaturen und
-  schließe dich mit Freunden in einer Gilde zusammen in dieser Open-World Fantasywelt.
-</p>
+    <!-- SOUNDTRACK PREVIEW (Jetzt etwas dezenter im Hintergrund) -->
+    <div class="bg-slate-900/80 backdrop-blur-md rounded-2xl p-6 mb-10 max-w-xl mx-auto text-left border border-white/10 shadow-2xl">
+      <h2 class="text-xl font-bold mb-4 text-amber-400">
+        Vorschau des Soundtracks
+      </h2>
 
-<!-- SOUNDTRACK PREVIEW -->
-<div class="card rounded-2xl p-6 mb-10 max-w-xl mx-auto text-left">
+      <p class="text-slate-300 mb-4">
+        Hörprobe: „Crawling Danger“ – Ambient Track.
+      </p>
 
-  <h2 class="text-xl font-bold mb-4 text-amber-400">
-    Vorschau des Soundtracks
-  </h2>
+      <audio controls class="w-full" aria-label="Fantasy Soundtrack Vorschau">
+        <source src="fantasy-theme.mp3" type="audio/mpeg">
+        Dein Browser unterstützt kein Audio.
+      </audio>
 
-  <p class="text-slate-300 mb-4">
-    Hörprobe aus dem offiziellen Fantasy Soundtrack.
-  </p>
+      <div class="text-xs text-slate-400 mt-3 flex flex-col gap-1">
+        <p><strong>Lizenz:</strong> Pixabay Content License</p>
+        <p><strong>Urheber:</strong> neofuturist via Pixabay</p>
+      </div>
+    </div>
 
-  <audio controls class="w-full" aria-label="Fantasy Soundtrack Vorschau">
-    <source src="fantasy-theme.mp3" type="audio/mpeg">
-    Dein Browser unterstützt kein Audio.
-  </audio>
-
-  <p class="text-sm text-slate-400 mt-3">
-    <strong>Lizenz:</strong> Freie Nutzung unter der 
-      <a href="https://pixabay.com/service/license-summary/" target="_blank" class="text-amber-400 hover:underline">Pixabay Content License</a>
-      <strong>Urheber:</strong> neofuturist via Pixabay.
-  </p>
-
-</div>
-
-<a
-  href="#pricing"
-  class="bg-amber-400 text-black font-bold px-8 py-4 rounded-xl hover:bg-amber-300 transition focus-ring inline-block"
-  aria-label="Zu den Kaufoptionen springen"
->
-  Jetzt kaufen
-</a>
-
+    <a
+      href="#pricing"
+      class="bg-amber-400 text-black font-bold px-10 py-4 rounded-xl hover:bg-amber-300 transition-all transform hover:scale-105 focus-ring inline-block shadow-xl"
+      aria-label="Zu den Kaufoptionen springen"
+    >
+      Jetzt kaufen
+    </a>
 
   </div>
-
 </section>
 
 <!-- FEATURES -->
@@ -925,7 +925,7 @@
             <td class="p-3 border border-slate-700">"Crawling Danger" Ambientmusik</td>
             <td class="p-3 border border-slate-700">
               Quelle: Pixabay (Künstler: SamuelFJohanns)<br>
-              Lizenz: Pixabay Content License (Freie nichtkommerzielle Nutzung)
+              Lizenz: Pixabay Content License. Erlaubt die kostenlose Nutzung und Modifikation für (fiktiv) kommerzielle Werke. Die Nutzung erfolgt als begleitendes Medium (Soundtrack) und ausdrücklich nicht als geschützte Handels- oder Bildmarke gemäß den Lizenzbedingungen.
             </td>
           </tr>
 
