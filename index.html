@@ -1093,6 +1093,7 @@ function closePopup(){
   function closeCookieBanner() {
     const banner = document.getElementById('cookieBanner');
     banner.style.transform = 'translateY(150%)'; // Sanftes Nach-unten-Gleiten
+    localStorage.setItem('cookieDecisionMade', 'true');
     setTimeout(() => {
       banner.classList.add('hidden');
     }, 500);
@@ -1101,10 +1102,16 @@ function closePopup(){
   // Optional: Banner nach 1 Sekunde Verzögerung anzeigen für besseren Effekt
   window.onload = () => {
     const banner = document.getElementById('cookieBanner');
-    banner.style.transform = 'translateY(150%)';
-    setTimeout(() => {
+    const decisionMade = localStorage.getItem('cookieDecisionMade');
+    if (!decisionMade) {
+      banner.style.transform = 'translateY(150%)';
+      setTimeout(() => {
         banner.style.transform = 'translateY(0)';
-    }, 1000);
+      }, 1000);
+    } else {
+      // Falls Entscheidung schon da ist, Banner direkt verstecken
+      banner.classList.add('hidden');
+    }
   };
 function reopenCookieBanner() {
   const banner = document.getElementById('cookieBanner');
