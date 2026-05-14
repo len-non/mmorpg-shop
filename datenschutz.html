@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impressum - DarkCavern Studios</title>
+  <title>Datenschutz - DarkCavern Studios</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -224,6 +224,22 @@
         </article>
     </div>
   </main>
+<script>
+function reopenCookieBanner() {
+  const banner = document.getElementById('cookieBanner');
+  banner.classList.remove('hidden');
+  setTimeout(() => {
+    banner.style.transform = 'translateY(0)';
+  }, 10);
+}
 
+function closeCookieBanner() {
+  const banner = document.getElementById('cookieBanner');
+  banner.style.transform = 'translateY(150%)';
+  setTimeout(() => {
+    banner.classList.add('hidden');
+  }, 500);
+}
+</script>
   </body>
 </html>
