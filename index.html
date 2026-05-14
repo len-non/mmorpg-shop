@@ -239,7 +239,7 @@
       <li>✔ 3 Klassen</li>
     </ul>
 
-    <button class="w-full bg-amber-400 text-black py-3 rounded-xl font-bold hover:bg-amber-300 transition focus-ring">
+    <button onclick="openPopup()" class="w-full bg-amber-400 text-black py-3 rounded-xl font-bold hover:bg-amber-300 transition focus-ring">
       Kaufen
     </button>
 
@@ -265,7 +265,7 @@
       <li>✔ Soundtrack</li>
     </ul>
 
-    <button class="w-full bg-amber-400 text-black py-3 rounded-xl font-bold hover:bg-amber-300 transition focus-ring">
+    <button onclick="openPopup()" class="w-full bg-amber-400 text-black py-3 rounded-xl font-bold hover:bg-amber-300 transition focus-ring">
       Deluxe kaufen
     </button>
 
@@ -287,7 +287,7 @@
       <li>✔ Beta Zugang</li>
     </ul>
 
-    <button class="w-full bg-amber-400 text-black py-3 rounded-xl font-bold hover:bg-amber-300 transition focus-ring">
+    <button onclick="openPopup()" class="w-full bg-amber-400 text-black py-3 rounded-xl font-bold hover:bg-amber-300 transition focus-ring">
       Collector kaufen
     </button>
 
@@ -457,6 +457,48 @@
   </p>
 
 </footer>
+
+<!-- MOCKUP POPUP -->
+
+<div id="mockupPopup" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50 px-6">
+
+  <div class="bg-slate-900 border border-slate-700 rounded-2xl p-8 max-w-md w-full text-center shadow-2xl">
+
+
+<h2 class="text-3xl font-bold text-amber-400 mb-4">
+  Mockup Checkout
+</h2>
+
+<p class="text-slate-300 mb-8 leading-relaxed">
+  Dies ist ein Mockup Webshop für ein Semesterprojekt.
+  Es erfolgt keine echte Zahlung und keine Daten werden gespeichert.
+</p>
+
+<button
+  onclick="closePopup()"
+  class="bg-amber-400 text-black font-bold px-6 py-3 rounded-xl hover:bg-amber-300 transition focus-ring"
+>
+  Verstanden
+</button>
+
+
+  </div>
+
+</div>
+
+<!-- SCRIPT -->
+
+<script>
+
+function openPopup(){
+  document.getElementById('mockupPopup').classList.remove('hidden');
+}
+
+function closePopup(){
+  document.getElementById('mockupPopup').classList.add('hidden');
+}
+
+</script>
 
 </body>
 </html>
