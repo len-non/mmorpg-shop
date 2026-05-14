@@ -649,7 +649,7 @@
                 </li>
               </ul>
               <p class="mt-2 italic">
-                Wenn Sie dies nicht wünschen, so können Sie Ihren Browser dementsprechend einrichten und Cookies deaktivieren, oder über den folgenden Button ihre Einwilligung zurückziehen bzw. ändern. 
+                Wenn Sie dies nicht wünschen, so können Sie Ihren Browser dementsprechend einrichten und Cookies deaktivieren, oder über den folgenden Button ihre Einwilligung jederzeit zurückziehen bzw. ändern. 
                 Bei der Deaktivierung von Cookies kann die Funktionalität unserer Website eingeschränkt sein.
               </p>
           </div>
@@ -884,6 +884,32 @@
 
 </div>
 
+<!-- COOKIE CONSENT BANNER (Aufgabe 5) -->
+<div id="cookieBanner" class="fixed bottom-6 left-6 right-6 md:left-auto md:max-w-md z-[100] transform transition-transform duration-500 translate-y-0">
+  <div class="card rounded-2xl p-6 shadow-2xl border-amber-400/30 bg-slate-900/95 backdrop-blur-md">
+    <div class="flex items-start gap-4">
+      <div class="text-3xl" aria-hidden="true">🍪</div>
+      <div>
+        <h3 class="text-lg font-bold text-amber-400 mb-2">Cookie-Einstellungen</h3>
+        <p class="text-sm text-slate-300 mb-4 leading-relaxed">
+          Wir nutzen Cookies, um Ihr Abenteuer in Vartheria zu optimieren. Einige sind essenziell, andere helfen uns, den Shop zu verbessern.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <button onclick="closeCookieBanner()" class="bg-amber-400 text-black text-sm font-bold px-4 py-2 rounded-lg hover:bg-amber-300 transition focus-ring">
+            Alle akzeptieren
+          </button>
+          <button onclick="closeCookieBanner()" class="bg-slate-700 text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-slate-600 transition focus-ring">
+            Nur essenzielle
+          </button>
+          <a href="#legal" onclick="closeCookieBanner()" class="text-xs text-slate-400 hover:text-amber-400 self-center underline">
+            Details
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
 <!-- SCRIPT -->
 
 <script>
@@ -896,6 +922,34 @@ function closePopup(){
   document.getElementById('mockupPopup').classList.add('hidden');
 }
 
+// Neue Cookie-Banner Funktion
+  function closeCookieBanner() {
+    const banner = document.getElementById('cookieBanner');
+    banner.style.transform = 'translateY(150%)'; // Sanftes Nach-unten-Gleiten
+    setTimeout(() => {
+      banner.classList.add('hidden');
+    }, 500);
+  }
+  
+  // Optional: Banner nach 1 Sekunde Verzögerung anzeigen für besseren Effekt
+  window.onload = () => {
+    const banner = document.getElementById('cookieBanner');
+    banner.style.transform = 'translateY(150%)';
+    setTimeout(() => {
+        banner.style.transform = 'translateY(0)';
+    }, 1000);
+  };
+function reopenCookieBanner() {
+  const banner = document.getElementById('cookieBanner');
+  banner.classList.remove('hidden');
+  // Kleiner Timeout für die Animation, damit es flüssig einscheidet
+  setTimeout(() => {
+    banner.style.transform = 'translateY(0)';
+  }, 10);
+  
+  // Optional: Scrolle den Nutzer nicht nach oben, damit er im Rechtstext bleibt
+}
+  
 </script>
 
 </body>
