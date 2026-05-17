@@ -69,95 +69,50 @@
         </article>
     </div>
     <div class="max-w-4xl mx-auto mt-8">
-      <article class="card rounded-2xl p-8 shadow-xl">
+    <article id="contact" class="card rounded-2xl p-8 shadow-xl">
         <h1 class="text-2xl font-bold mb-6 text-amber-400 border-b border-slate-700 pb-2">
-    Urheberrechtshinweise & Medienlizenzen
-  </h1>
+          Kontakformular 
+        </h1>
 
-  <div class="text-slate-300 text-sm leading-relaxed space-y-6">
-    <p>
-      Gemäß den Vorschriften des Urheberrechts dokumentiert DarkCavern Studios GmbH im folgenden Text die Quellen und Lizenzen, welche auf Rechtskonformität geprüft wurden, aller verwendeten Medien. 
-    </p>
-    
-    <div class="overflow-x-auto">
-      <table class="w-full text-left border-collapse border border-slate-700 text-xs md:text-sm">
-        <thead>
-          <tr class="bg-slate-800 text-amber-400">
-            <th class="p-3 border border-slate-700">Medium</th>
-            <th class="p-3 border border-slate-700">Bezeichnung</th>
-            <th class="p-3 border border-slate-700">Quelle & Lizenz</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="p-3 border border-slate-700 font-semibold text-white">Wortbildmarke</td>
-            <td class="p-3 border border-slate-700">"DarkCavern Studios" Logo</td>
-            <td class="p-3 border border-slate-700">Grundform generiert mit <strong>Google Gemini (Modell 3 Flash)</strong>. <br>
-    Lizenz: Gemäß <strong>Google Terms of Service</strong> stehen die Nutzungsrechte am Output dem Ersteller des Prompts zu. <br>
-            Einzelne Modifikationen und Anpassungen durch den Urheber.</td>
-          </tr>
-          <tr class="bg-slate-950/40">
-            <td class="p-3 border border-slate-700 font-semibold text-white">Bildmarke</td>
-            <td class="p-3 border border-slate-700">Logo ohne Text</td>
-            <td class="p-3 border border-slate-700">Grundfrom generiert mit <strong>Google Gemini (Modell 3 Flash)</strong>. <br>
-    Lizenz: Gemäß <strong>Google Terms of Service</strong> stehen die Nutzungsrechte am Output dem Ersteller des Prompts zu.<br>
-            Einzelne Modifikationen und Anpassungen durch den Urheber.</td>
-          </tr>
+        <form action="#" method="POST" class="space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label for="name" class="block text-xs font-semibold text-slate-400 uppercase mb-2">Name</label>
+              <input type="text" id="name" name="name" required 
+                class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 transition"
+                placeholder="Vorname Nachname">
+            </div>
+            <div>
+              <label for="email" class="block text-xs font-semibold text-slate-400 uppercase mb-2">E-Mail-Adresse</label>
+              <input type="email" id="email" name="email" required 
+                class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 transition"
+                placeholder="deine@email.at">
+            </div>
+          </div>
 
-          <tr>
-            <td class="p-3 border border-slate-700 font-semibold text-white">Soundtrack</td>
-            <td class="p-3 border border-slate-700">"Crawling Danger" Ambientmusik</td>
-            <td class="p-3 border border-slate-700">
-              Quelle: <a href="https://pixabay.com/de/music/umgebungs-crawling-danger-303228/" class="text-amber-400 hover:underline" target="_blank">https://pixabay.com/de/music/umgebungs-crawling-danger-303228/</a> Pixabay (Künstler: <strong>SamuelFJohanns</strong>)<br>
-              Lizenz: <strong>Pixabay Content License</strong>, erlaubt die kostenlose Nutzung für kommerzielle Werke. Die Nutzung erfolgt ausdrücklich nicht als geschützte Handels- oder Bildmarke.
-            </td>
-          </tr>
+          <div>
+            <label for="message" class="block text-xs font-semibold text-slate-400 uppercase mb-2">Nachricht</label>
+            <textarea id="message" name="message" rows="4" required 
+              class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 transition"
+              placeholder="Deine Nachricht..."></textarea>
+          </div>
 
-          <tr class="bg-slate-950/40">
-            <td class="p-3 border border-slate-700 font-semibold text-white">Schriftart</td>
-            <td class="p-3 border border-slate-700">Inter Family</td>
-            <td class="p-3 border border-slate-700">
-              Quelle: Google Fonts<br>
-              Lizenz: <strong>SIL Open Font License</strong> (OFL)
-            </td>
-          </tr>
+          <div class="flex items-start">
+            <input type="checkbox" id="privacy" name="privacy" required 
+              class="mt-1 h-4 w-4 rounded border-slate-700 bg-slate-800 text-amber-400 focus:ring-amber-400">
+            <label for="privacy" class="ml-3 text-xs text-slate-400 leading-relaxed">
+              Ich stimme hiermit zu, dass meine Daten zum Zweck der Bearbeitung dieser Anfrage gespeichert und verarbeitet werden (siehe <a href="datenschutz.html" class="text-amber-400 hover:underline">Datenschutzerklärung</a>).
+            </label>
+          </div>
 
-          <tr>
-            <td class="p-3 border border-slate-700 font-semibold text-white">Web-Hosting</td>
-            <td class="p-3 border border-slate-700">GitHub Pages</td>
-            <td class="p-3 border border-slate-700">Bereitstellung durch <strong>GitHub Inc.</strong> (Zertifiziert nach EU-US Data Privacy Framework)</td>
-          </tr>
-
-          <tr class="bg-slate-950/40">
-            <td class="p-3 border border-slate-700 font-semibold text-white">Design & Websitestruktur</td>
-            <td class="p-3 border border-slate-700">HTML/CSS & Content</td>
-            <td class="p-3 border border-slate-700">Generiert mit Unterstützung von <strong>Google Gemini</strong>. <br>
-    Lizenz: <strong>Creative Commons Zero (CC0) Äquivalent</strong> / Public Domain.</td>
-          </tr>
-
-          <tr>
-            <td class="p-3 border border-slate-700 font-semibold text-white">Icons</td>
-            <td class="p-3 border border-slate-700">Unicode Emojis & Symbole</td>
-            <td class="p-3 border border-slate-700"><strong>Lizenzfreier Unicode-Standard</strong> zur Darstellung.</td>
-          </tr>
-
-          <tr class="bg-slate-950/40">
-            <td class="p-3 border border-slate-700 font-semibold text-white">Visual der Welt</td>
-            <td class="p-3 border border-slate-700">Hintergrundbild der Homepage</td>
-            <td class="p-3 border border-slate-700">
-              Quelle: <a href="https://www.pexels.com/de-de/foto/19249878/" class="text-amber-400 hover:underline" target="_blank">https://www.pexels.com/de-de/foto/schwarz-und-weiss-schwarzweiss-springen-hupfen-19249878/</a> Pexels (Urheber: <strong>"Breizh Clichés"</strong>)<br>
-    Lizenz: <strong>Pexels Lizenz</strong>, freie Nutzung für kommerzielle und nicht-kommerzielle Zwecke gestattet.
-            </td>
-          </tr>
-          
-        </tbody>
-      </table>
+          <button type="submit" 
+            class="w-full md:w-auto bg-amber-400 text-black font-bold px-8 py-3 rounded-xl hover:bg-amber-300 transition-all active:scale-95 shadow-lg shadow-amber-400/10">
+            Nachricht absenden
+          </button>
+        </form>
+      </article>
     </div>
-   
-  </div>
-</article>
       
-    </div>
   </main>
 <!-- FOOTER -->
 
