@@ -114,6 +114,15 @@
     </div>
       
   </main>
+
+  <div id="successModal" class="hidden fixed inset-0 z-[100] flex items-center justify-center px-6">
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+    <div class="card relative z-10 w-full max-w-sm rounded-3xl p-8 text-center border-amber-400/30 bg-slate-900">
+      <h2 class="text-2xl font-bold text-amber-400 mb-2">Nachricht versendet!</h2>
+      <p class="text-slate-300 mb-6 text-sm">Deine Nachricht wurde an DarkCavern Studios weitergeleitet und wird sofort bearbeitet.</p>
+      <button onclick="closeSuccessModal()" class="w-full bg-amber-400 text-black font-bold py-3 rounded-xl hover:bg-amber-300 transition">Schließen</button>
+    </div>
+  </div>
 <!-- FOOTER -->
 
 <footer class="bg-slate-950 border-t border-slate-800 py-12 px-6">
@@ -160,5 +169,22 @@
     <p>Diese Website ist ein reiner Mockup. Jegliche Angaben sind fiktiv und nicht real.</p>
   </div>
 </footer>
+
+<script>
+    function handleContactSubmit(event) {
+      event.preventDefault(); // Verhindert das Neuladen der Seite (kein Error!)
+      
+      // Hier könnte man theoretisch Daten senden, für den Mockup zeigen wir nur das Popup
+      document.getElementById('successModal').classList.remove('hidden');
+      document.getElementById('contactForm').reset(); // Leert die Felder
+      document.body.style.overflow = 'hidden'; // Stoppt Scrollen
+    }
+
+    function closeSuccessModal() {
+      document.getElementById('successModal').classList.add('hidden');
+      document.body.style.overflow = 'auto'; // Erlaubt Scrollen wieder
+    }
+  </script>
+  
   </body>
 </html>
